@@ -1,10 +1,7 @@
-// RANKING LIST
+// RANKING LIST START CODE
 
 // HTML Variables
 let outputEl = document.getElementById("output");
-
-// Global Variables
-let rankList = [];
 
 // Button Event Listener
 document.getElementById("btn").addEventListener("click", btnClicked);
@@ -27,53 +24,29 @@ function btnClicked() {
   } else if (selection === "edit") {
     edit();
   }
-
-  printList();
 }
 
+// Menu Option Functions
 function addItem() {
-  let item = prompt("Enter item: ");
-  rankList.push(item);
+  console.log("Add Item");
 }
 
 function removeLast() {
-  rankList.pop();
+  console.log("Remove Last");
 }
 
 function insert() {
-  let pos = +prompt("Insert Position: ");
-  let item = prompt("Item to Insert: ");
-  rankList.splice(pos - 1, 0, item);
+  console.log("Insert");
 }
 
 function removePos() {
-  let pos = +prompt("Position to remove: ");
-  rankList.splice(pos - 1, 1);
+  console.log("Remove at Position");
 }
 
 function move() {
-  let posFrom = +prompt("Move item from: ");
-  let posTo = +prompt("Move item to: ");
-  let item = rankList.splice(posFrom - 1, 1);
-  rankList.splice(posTo - 1, 0, item);
+  console.log("Move");
 }
 
 function edit() {
-  let pos = +prompt("Enter position: ");
-  let newValue = prompt("Replace with: ");
-  rankList[pos - 1] = newValue;
-}
-
-function printList() {
-  outputEl.innerHTML = "";
-  for (let i = 0; i < rankList.length; i++) {
-    outputEl.appendChild(newItem(i, rankList[i]));
-  }
-}
-
-function newItem(index, item) {
-  let itemEl = document.createElement("div");
-  itemEl.textContent = `${index + 1}: ${item}`;
-  itemEl.dataset.index = index;
-  return itemEl;
+  console.log("Edit");
 }
