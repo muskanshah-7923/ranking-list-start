@@ -3,6 +3,10 @@
 // HTML Variables
 let outputEl = document.getElementById("output");
 
+// Ranking List Array
+let rankList = ["Pizza", "Pasta", "Salad", "Soup"];
+drawRankList();
+
 // Button Event Listener
 document.getElementById("btn").addEventListener("click", btnClicked);
 
@@ -23,10 +27,19 @@ function btnClicked() {
     move();
   } else if (selection === "edit") {
     edit();
+  } else if (selection == "empty") {
+    empty();
   }
+
+  // Redraw rankList after changes have been made
+  drawRankList();
 }
 
-// Menu Option Functions
+// FUNCTIONS TO DEFINE
+function drawRankList() {
+  console.log("Draw rankList");
+}
+
 function addItem() {
   console.log("Add Item");
 }
@@ -49,4 +62,8 @@ function move() {
 
 function edit() {
   console.log("Edit");
+}
+
+function empty() {
+  console.log("Empty");
 }
