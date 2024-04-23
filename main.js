@@ -36,13 +36,26 @@ function btnClicked() {
 }
 
 // FUNCTIONS TO DEFINE
+
 function drawRankList() {
+let num = 1;
+
+  for (let i = 0; i < rankList.length; i++) {
+    outputEl.innerHTML += "<p>" + num++ + ":" + rankList[i] + "<p/>"
+  }
   console.log("Draw rankList");
+
 }
 
 function addItem() {
+for (let i = 0; i < rankList.length; i++) {
+let newItem = prompt("Enter Item:");
+if (newItem) 
+return rankList.push(newItem)
+}
   console.log("Add Item");
 }
+
 
 function removeLast() {
   console.log("Remove Last");
