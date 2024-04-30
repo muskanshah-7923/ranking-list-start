@@ -48,11 +48,17 @@ function drawRankList() {
 
 function addItem() {
   let newItem = prompt("Enter Item:");
+<<<<<<< HEAD
   let add = document.getElementById("output");
   outputEl.innerHTML += "<p>" + rankList.length + ":" + newItem ;
   outputEl.innerHTML = add;
   rankList.push(newItem)
+=======
+  for (let i = 0; i < rankList.length; i++) {
+  outputEl.innerHTML += rankList.push(newItem);
+>>>>>>> 331587adad5876a2c36f5dceb24ef9c2d11d54e4
 
+  }
   console.log("Add Item");
 }
 
