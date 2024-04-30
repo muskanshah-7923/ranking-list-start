@@ -49,17 +49,14 @@ function drawRankList() {
 function addItem() {
   let newItem = prompt("Enter Item:");
   let add = document.getElementById("output");
-  outputEl.innerHTML += "<p>" + rankList.length + ":" + newItem ;
   outputEl.innerHTML = add;
-  rankList.push(newItem)
-  for (let i = 0; i < rankList.length; i++) {
   outputEl.innerHTML += rankList.push(newItem);
-
-  }
   console.log("Add Item");
 }
 
 function removeLast() {
+  let remove = document.getElementById("output");
+  outputEl.innerHTML = remove;
   rankList.pop();
   console.log("Remove Last");
 }
@@ -67,9 +64,8 @@ function removeLast() {
 function insert() {
     let position = +prompt("Enter Position to Insert:");
     let newItem = prompt("Enter Item to Insert:");
-  outputEl.innerHTML += "<p>" + rankList.length + ":" + newItem ;
 
-    rankList.splice(position, 0, newItem);
+  rankList.splice(position);
   
   console.log("Insert");
 }
@@ -78,9 +74,7 @@ function removePos() {
   console.log("Remove at Position");
 }
 
-function move() {
   console.log("Move");
-}
 
 function edit() {
   console.log("Edit");
