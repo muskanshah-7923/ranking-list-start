@@ -41,23 +41,33 @@ function drawRankList() {
   let num = 1;
 
   for (let i = 0; i < rankList.length; i++) {
-    outputEl.innerHTML += "<p>" + num++ + ":" + rankList[i];
+    outputEl.innerHTML += "<p>" + num++ + ":" + rankList[i] + "</p>" ;
   }
   console.log("Draw rankList");
 }
 
 function addItem() {
   let newItem = prompt("Enter Item:");
-  outputEl.innerHTML += rankList.push(newItem);
+  let add = document.getElementById("output");
+  outputEl.innerHTML += "<p>" + rankList.length + ":" + newItem ;
+  outputEl.innerHTML = add;
+  rankList.push(newItem)
 
   console.log("Add Item");
 }
 
 function removeLast() {
+  rankList.pop();
   console.log("Remove Last");
 }
 
 function insert() {
+    let position = +prompt("Enter Position to Insert:");
+    let newItem = prompt("Enter Item to Insert:");
+  outputEl.innerHTML += "<p>" + rankList.length + ":" + newItem ;
+
+    rankList.splice(position, 0, newItem);
+  
   console.log("Insert");
 }
 
