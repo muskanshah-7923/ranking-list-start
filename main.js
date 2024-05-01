@@ -48,21 +48,15 @@ function drawRankList() {
 
 function addItem() {
   let newItem = prompt("Enter Item:");
-<<<<<<< HEAD
   let add = document.getElementById("output");
-  outputEl.innerHTML += "<p>" + rankList.length + ":" + newItem ;
   outputEl.innerHTML = add;
-  rankList.push(newItem)
-=======
-  for (let i = 0; i < rankList.length; i++) {
   outputEl.innerHTML += rankList.push(newItem);
->>>>>>> 331587adad5876a2c36f5dceb24ef9c2d11d54e4
-
-  }
   console.log("Add Item");
 }
 
 function removeLast() {
+  let remove = document.getElementById("output");
+  outputEl.innerHTML = remove;
   rankList.pop();
   console.log("Remove Last");
 }
@@ -70,19 +64,30 @@ function removeLast() {
 function insert() {
     let position = +prompt("Enter Position to Insert:");
     let newItem = prompt("Enter Item to Insert:");
-  outputEl.innerHTML += "<p>" + rankList.length + ":" + newItem ;
 
-    rankList.splice(position, 0, newItem);
+ document.getElementById("output").innerHTML = rankList.splice(position, 0, newItem);
   
   console.log("Insert");
 }
 
 function removePos() {
+  let removePos = +prompt("Enter Position to Remove:");
+    document.getElementById("output").innerHTML = rankList.splice(removePos, 1);
+  
   console.log("Remove at Position");
 }
-
 function move() {
-  console.log("Move");
+  let positionFrom = +prompt("Enter Position to Move from:");
+  let positionTo = +prompt("Enter Position to Move to:");
+
+  if (positionFrom >= 0 ) {
+      let itemToMove = rankList[positionFrom];
+      rankList.splice(positionFrom, 1);
+
+      document.getElementById("output").innerHTML = rankList.splice(positionTo, 0, itemToMove);
+
+  }
+  console.log("Move")
 }
 
 function edit() {
@@ -90,5 +95,7 @@ function edit() {
 }
 
 function empty() {
+  rankList = [];
+  document.getElementById("output").innerHTML= "List emptied.";
   console.log("Empty");
 }
