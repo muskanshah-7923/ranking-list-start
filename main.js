@@ -65,7 +65,11 @@ function insert() {
     let position = +prompt("Enter Position to Insert:");
     let newItem = prompt("Enter Item to Insert:");
 
+<<<<<<< HEAD
  document.getElementById("output").innerHTML = rankList.splice(position, 0, newItem);
+=======
+  rankList.splice(position);
+>>>>>>> 617b86b014cc29d36bd85f6e21c5e3318fc3d02c
   
   console.log("Insert");
 }
@@ -76,6 +80,7 @@ function removePos() {
   
   console.log("Remove at Position");
 }
+<<<<<<< HEAD
 function move() {
   let positionFrom = +prompt("Enter Position to Move from:");
   let positionTo = +prompt("Enter Position to Move to:");
@@ -89,6 +94,10 @@ function move() {
   }
   console.log("Move")
 }
+=======
+
+  console.log("Move");
+>>>>>>> 617b86b014cc29d36bd85f6e21c5e3318fc3d02c
 
 function edit() {
   console.log("Edit");
