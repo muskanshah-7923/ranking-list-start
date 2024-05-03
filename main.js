@@ -48,8 +48,6 @@ function drawRankList() {
 
 function addItem() {
   let newItem = prompt("Enter Item:");
-  let add = document.getElementById("output");
-  outputEl.innerHTML = add;
   outputEl.innerHTML += rankList.push(newItem);
   console.log("Add Item");
 }
