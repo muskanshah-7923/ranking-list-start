@@ -98,12 +98,11 @@ let newItem = prompt("Enter the new item:");
 if (position >= 0 ) {
 outputEl.innerHTML = rankList[position] = newItem;
 }
-  
   console.log("Edit");
 }
 
 function empty() {
-  rankList = [];
+  rankList = 0;
   document.getElementById("output").innerHTML= "List emptied.";
   console.log("Empty");
 }
